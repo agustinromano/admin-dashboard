@@ -128,41 +128,100 @@ table {
   border-spacing: 0;
 }
 
-/* main CSS starts hear*/
+/* ---- main CSS starts hear ---- */
 body {
-  background-color: rgb(207, 207, 207);
+  background-color: #10b981;
+  font-family: "Roboto", sans-serif;
 }
 
 .main-page {
   display: grid;
-  gap: 4px;
+  /* gap: 4px; */
   grid-template-rows: repeat(6, 150px);
   grid-template-columns: repeat(6, 1fr);
 }
 /* Left side */
 .left-side {
-  background-color: darkslategray;
+  background-color: #0f172a;
   border: solid 1px red;
   grid-area: 1 / 1 / 7 / 2;
 }
 
 /* Header */
 .header-page {
-  background-color: rgb(255, 255, 255);
+  background-color: #d1fae5;
   border: solid 1px red;
   grid-area: 1 / 2 / 2 / 7;
 }
 
 /* Work main focus */
 .recent-work {
-  /* background-color: blueviolet; */
-  border: solid 1px red;
   grid-area: 2 / 2 / 7 / 6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 15px 1fr 1fr;
+  gap: 10px;
+  padding: 4px;
+}
+
+.work-title {
+  font-family: "Roboto", sans-serif;
+  font-size: larger;
+  grid-column: span 3;
+}
+
+.work {
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.work p {
+  padding-top: 6px;
+}
+
+.work h1 {
+  font-style: italic;
 }
 
 /* Right side */
 .right-side {
-  /* background-color: blue; */
-  border: solid 1px red;
   grid-area: 2 / 7 / 7 / 6;
+}
+
+.announcements,
+.fav-contacts {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.fav-contacts {
+  margin-top: 50px;
+}
+
+.anc-h1,
+.favs-h1 {
+  font-style: italic;
+  margin-left: 3px;
+}
+
+.upcoming,
+.person {
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 5px;
+  padding: 3px;
+  margin: 3px;
+  height: auto;
+}
+
+.person p,
+.upcoming p {
+  font-size: small;
+  padding: 5px 0px 0px;
+}
+
+.add:hover {
+  cursor: pointer;
+  color: rgb(67, 67, 67);
 }
