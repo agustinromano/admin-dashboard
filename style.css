@@ -136,15 +136,27 @@ body {
 
 .main-page {
   display: grid;
-  /* gap: 4px; */
   grid-template-rows: repeat(6, 150px);
   grid-template-columns: repeat(6, 1fr);
 }
 /* Left side */
 .left-side {
   background-color: #0f172a;
-  border: solid 1px red;
   grid-area: 1 / 1 / 7 / 2;
+  display: grid;
+  grid-template-rows: 150px repeat(4, 30px);
+}
+
+.options {
+  border: solid 1px red;
+}
+
+.options img:hover {
+  cursor: pointer;
+}
+
+.left-side h1 {
+  color: rgb(210, 210, 210);
 }
 
 /* Header */
@@ -159,7 +171,7 @@ body {
   grid-area: 2 / 2 / 7 / 6;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 15px 1fr 1fr;
+  grid-template-rows: 23px 1fr 1fr;
   gap: 10px;
   padding: 4px;
 }
@@ -193,7 +205,7 @@ body {
 .fav-contacts {
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
+  margin-top: 37px;
 }
 
 .fav-contacts {
@@ -221,6 +233,10 @@ body {
   padding: 5px 0px 0px;
 }
 
+.add {
+  padding: 3px;
+  padding-top: 10px;
+}
 .add:hover {
   cursor: pointer;
   color: rgb(67, 67, 67);
